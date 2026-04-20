@@ -1,0 +1,6 @@
+@AlmaJoias_HostAddress = http://localhost:5230
+
+GET {{AlmaJoias_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
