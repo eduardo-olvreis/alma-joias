@@ -7,12 +7,12 @@ namespace Produtos_API.Data
     {
         public AppDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Joia> Joias { get; set; }
-    };
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Joia>()
-            .Property(j => j.Preco)
-            .HasConversion<double>();
-    }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Joia>()
+                .Property(j => j.Preco)
+                .HasConversion<double>();
+        }
+    };
 }
