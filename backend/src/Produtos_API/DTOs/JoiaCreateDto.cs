@@ -1,12 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Produtos_API.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace Produtos_API.Models
+namespace Produtos_API.DTOs
 {
-    public class Joia
+    public class JoiaCreateDto
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public required string Nome { get; set; }
 
