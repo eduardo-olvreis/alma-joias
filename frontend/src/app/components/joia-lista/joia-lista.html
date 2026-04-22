@@ -7,8 +7,7 @@
       <ul>
         @for (item of joias; track item.id) {
           <li>
-            <strong>{{ item.nome }}</strong> - R$ {{ item.preco }}
-            <p>{{ item.descricao }}</p>
+            <strong>{{ item.nome }}</strong><br>
             <a [routerLink]="['/produtos/detalhe', item.id]">Exibir detalhes</a>
           </li>
         }
@@ -17,9 +16,5 @@
       <p>Nenhuma joia encontrada.</p>
     }
   }
-  @if (joias.length > 0) {
-
-  }
-
-  <a routerLink="/home">Back to Home</a>
+  <a routerLink="/home">Voltar ao início</a>
 </div>

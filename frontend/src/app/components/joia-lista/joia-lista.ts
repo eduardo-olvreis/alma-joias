@@ -32,11 +32,11 @@ export class JoiaListaComponent implements OnInit {
       })
     ).subscribe({
       next: (dados) => {
-        this.joias = dados.filter(j => 
-          j.categoria.trim() === this.categoriaUrl?.trim()
-        );
-        this.isLoading = false;
-        this.cdr.detectChanges();
+        setTimeout(() => {
+          this.joias = dados.filter(j => j.categoria.trim() === this.categoriaUrl?.trim());
+          this.isLoading = false;
+          this.cdr.detectChanges();
+        }, 300);
       },
       error: (e) => console.error("Erro na busca:", e)
     });
