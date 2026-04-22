@@ -13,7 +13,7 @@ namespace Produtos_API.Models
         [Required]
         public required string Descricao { get; set; }
 
-        public decimal Preco { get; set; }
+        public decimal Preco { get; set; } = 0m;
 
         public string UrlImagem { get; set; } = "https://placehold.co/600x400?text=Sem+Foto";
 
