@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoiaLista } from './joia-lista';
+import { JoiaListaComponent } from './joia-lista';
 
-describe('JoiaLista', () => {
-  let component: JoiaLista;
-  let fixture: ComponentFixture<JoiaLista>;
+describe('JoiaListaComponent', () => {
+  let component: JoiaListaComponent;
+  let fixture: ComponentFixture<JoiaListaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JoiaLista],
+      imports: [JoiaListaComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(JoiaLista);
+    fixture = TestBed.createComponent(JoiaListaComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

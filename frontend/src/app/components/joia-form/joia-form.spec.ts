@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoiaDetalheComponent } from './joia-detalhe';
+import { JoiaFormComponent } from './joia-form';
 
-describe('JoiaDetalheComponent', () => {
-  let component: JoiaDetalheComponent;
-  let fixture: ComponentFixture<JoiaDetalheComponent>;
+describe('JoiaFormComponent', () => {
+  let component: JoiaFormComponent;
+  let fixture: ComponentFixture<JoiaFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JoiaDetalheComponent],
+      imports: [JoiaFormComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(JoiaDetalheComponent);
+    fixture = TestBed.createComponent(JoiaFormComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

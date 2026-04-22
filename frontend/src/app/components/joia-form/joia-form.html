@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Cadastrar Nova Jóia</h2>
+  <form [formGroup]="formJoia" (ngSubmit)="salvar()">
+    <div>
+      <label>Nome:</label>
+      <input type="text" formControlName="nome">
+    </div>
+    <div>
+      <label>Descrição:</label>
+      <input type="text" formControlName="descricao">
+    </div>
+    <div>
+      <label>Preço:</label>
+      <input type="number" formControlName="preco">
+    </div>
+    <div>
+      <label>Categoria:</label>
+      <select name="categoria" formControlName="categoria">
+        <option [value]="1">Anél</option>
+        <option [value]="2">Brinco</option>
+        <option [value]="3">Colar</option>
+        <option [value]="4">Pulseira</option>
+      </select>
+    </div>
+    <div>
+      <label>Imagem:</label>
+      <input type="text" formControlName="urlImagem">
+    </div>
+    <button type="submit" [disabled]="formJoia.invalid">Salvar Jóia</button>
+  </form>
+</div>

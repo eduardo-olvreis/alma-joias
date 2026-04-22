@@ -17,4 +17,8 @@ export class JoiaService {
   obterPorId(id: number): Observable<Joia>{
     return this.http.get<Joia>(this.apiUrl + `/${id}`)
   }
+
+  criarJoia(joia: Joia): Observable<Joia>{
+    return this.http.post<Joia>(this.apiUrl, joia)
+  }
 }
