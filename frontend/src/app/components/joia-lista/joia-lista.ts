@@ -41,4 +41,16 @@ export class JoiaListaComponent implements OnInit {
       error: (e) => console.error("Erro na busca:", e)
     });
   }
+
+  excluirJoia(id: number): void {
+    if(confirm("Tem certeza que deseja remover essa jóia?"))
+      this.joiaService.excluirJoia(id).subscribe({
+        next: () => {
+          this.joias = this.joias.filter(j => j.id !== id);
+          this.cdr.detectChanges();
+          alert("Jóia removida do sistema.")
+        },
+        error: (e) => console.error("Erro ao excluir:",e)
+      })
+  }
 }

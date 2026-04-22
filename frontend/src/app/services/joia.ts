@@ -21,4 +21,8 @@ export class JoiaService {
   criarJoia(joia: Joia): Observable<Joia>{
     return this.http.post<Joia>(this.apiUrl, joia)
   }
+
+  excluirJoia(id: number): Observable<void>{
+    return this.http.delete<void>(this.apiUrl + `/${id}`)
+  }
 }

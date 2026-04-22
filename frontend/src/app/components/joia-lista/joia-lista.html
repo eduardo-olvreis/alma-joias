@@ -8,6 +8,7 @@
         @for (item of joias; track item.id) {
           <li>
             <strong>{{ item.nome }}</strong><br>
+            <button (click)="excluirJoia(item.id!)">Excluir</button>
             <a [routerLink]="['/produtos/detalhe', item.id]">Exibir detalhes</a>
           </li>
         }
