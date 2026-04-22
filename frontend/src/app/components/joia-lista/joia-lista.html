@@ -1,1 +1,18 @@
-<p>joia-lista works!</p>
+<div class="container">
+  <h2>Produtos: {{ categoriaUrl }}</h2>
+
+  @if (joias.length > 0) {
+    <ul>
+      @for (item of joias; track item.id) {
+        <li>
+          <strong>{{ item.nome }}</strong> - R$ {{ item.preco }}
+          <p>{{ item.descricao }}</p>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p>Ops! Nenhuma joia encontrada nesta categoria. 💎</p>
+  }
+
+  <a routerLink="/home">Back to Home</a>
+</div>
