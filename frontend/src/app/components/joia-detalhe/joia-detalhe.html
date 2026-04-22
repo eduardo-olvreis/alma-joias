@@ -1,0 +1,13 @@
+<div class="container">
+  @if (joia != null){
+    <h2>Detalhes: {{joia.nome}}</h2>
+    <p>{{joia.descricao}}</p>
+    <p>Preço: {{joia.preco | currency:'BRL'}}</p>
+    <p>Categoria: {{joia.categoria}}</p>
+    <a [routerLink]="['/produtos', joia.categoria]">Voltar para lista de Jóias</a>
+  } @else{
+    <p>Carregando...</p>
+  }
+  <hr>
+  <a routerLink="/home">Voltar para o início</a>
+</div>

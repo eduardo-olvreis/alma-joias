@@ -15,6 +15,7 @@ import { Joia } from '../../models/joia';
 export class JoiaListaComponent implements OnInit {
   joias: Joia[] = [];
   categoriaUrl: string | null = "";
+  isLoading = true;
 
   constructor(
     private joiaService: JoiaService,
@@ -25,6 +26,7 @@ export class JoiaListaComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.pipe(
       switchMap(params => {
+        this.isLoading = true;
         this.categoriaUrl = params['categoria'];
         return this.joiaService.obterTodos();
       })
@@ -33,6 +35,7 @@ export class JoiaListaComponent implements OnInit {
         this.joias = dados.filter(j => 
           j.categoria.trim() === this.categoriaUrl?.trim()
         );
+        this.isLoading = false;
         this.cdr.detectChanges();
       },
       error: (e) => console.error("Erro na busca:", e)
