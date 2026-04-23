@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Produtos_API.DTOs;
 using Produtos_API.Models;
 using Produtos_API.Repositories;
@@ -48,6 +49,7 @@ namespace Produtos_API.Controller
             return Ok(response);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<JoiaResponseDto>> CriarJoiaAsync(JoiaCreateDto joiaDto)
         {
@@ -72,6 +74,7 @@ namespace Produtos_API.Controller
             return CreatedAtAction("ObterPorId", new { id = response.Id }, response);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult<JoiaResponseDto>> AtualizarJoiaAsync(int id, [FromBody] JoiaCreateDto joiaDto)
         {
@@ -98,6 +101,7 @@ namespace Produtos_API.Controller
             return Ok(response);
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeletarJoiaAsync(int id)
         {
