@@ -9,6 +9,6 @@ export const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "produtos/:categoria", component: JoiaListaComponent },
   { path: "produtos/detalhe/:id", component: JoiaDetalheComponent },
-  
-  { path: "admin/cadastro", component: JoiaFormComponent}
+  { path: "admin/cadastro", component: JoiaFormComponent},
+  { path: "admin/editar/:id", component: JoiaFormComponent }
 ];

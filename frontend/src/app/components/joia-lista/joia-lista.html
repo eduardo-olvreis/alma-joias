@@ -10,6 +10,7 @@
             <strong>{{ item.nome }}</strong><br>
             <button (click)="excluirJoia(item.id!)">Excluir</button>
             <a [routerLink]="['/produtos/detalhe', item.id]">Exibir detalhes</a>
+            <button [routerLink]="['/admin/editar', item.id]">Editar</button>
           </li>
         }
       </ul>

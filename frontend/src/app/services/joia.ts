@@ -22,6 +22,10 @@ export class JoiaService {
     return this.http.post<Joia>(this.apiUrl, joia)
   }
 
+  atualizarJoia(joia: Joia): Observable<Joia>{
+    return this.http.put<Joia>(this.apiUrl + `/${joia.id}`, joia)
+  }
+
   excluirJoia(id: number): Observable<void>{
     return this.http.delete<void>(this.apiUrl + `/${id}`)
   }
