@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div class="login-container">
+  <h2>Acesso Administrativo - Alma Joias</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" formControlName="usuario" placeholder="Digite seu usuário">
+    </div>
+    <div>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" formControlName="senha" placeholder="Digite sua senha">
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid">Entrar no Painel</button>
+  </form>
+</div>
