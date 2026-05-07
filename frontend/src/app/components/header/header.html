@@ -1,4 +1,4 @@
-<header class="flex justify-between items-center p-10 ">
+<header class="flex justify-between items-center p-10">
   <!-- Menu -->
   <nav>
     <ul>
@@ -9,8 +9,8 @@
           </svg>
         </button>
 
-        <!-- Menu Lateral -->
-        <div *ngIf="isMenuOpen" class="absolute top-24 left-0 w-full bg-white shadow-lg z-100">
+        <!-- Menu Aberto -->
+        <div *ngIf="isMenuOpen" class="absolute top-24 left-0 w-full bg-white shadow-lg z-50">
           <ul class="flex flex-col items-center py-4">
             <li class="py-2"><a routerLink="/home" (click)="toggleMenu()">Home</a></li>
             <li class="py-2"><a routerLink="/home" fragment="categorias" (click)="toggleMenu()">Categorias</a></li>
