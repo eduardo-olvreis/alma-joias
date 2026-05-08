@@ -13,6 +13,7 @@ namespace Produtos_API.DTOs
 
         public decimal? Preco { get; set; } = 0m;
 
+        [MaxLength]
         public string UrlImagem { get; set; } = "https://placehold.co/600x400?text=Sem+Foto";
 
         public bool IsAtivo { get; set; } = true;
