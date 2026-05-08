@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body.menu-is-open {
-  main {
-    filter: blur(5px);
-    pointer-events: none;
-    transition: filter 0.3s ease;
-  }
+html {
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  transition: filter 0.3s ease;
+body{
+  box-sizing: border-box;
 }
