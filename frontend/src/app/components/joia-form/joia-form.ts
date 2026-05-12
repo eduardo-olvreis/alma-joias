@@ -61,4 +61,17 @@ export class JoiaFormComponent implements OnInit{
       }
     }
   }
+
+  aoSelecionarArquivo(event: any): void {
+    const arquivo: File = event.target.files[0];
+    if (arquivo) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.formJoia.patchValue({ 
+          urlImagem: reader.result as string 
+        });
+      };
+      reader.readAsDataURL(arquivo);
+    }
+  }
 }

@@ -24,7 +24,13 @@
     </div>
     <div>
       <label>Imagem:</label>
-      <input type="text" formControlName="urlImagem">
+      <input type="file" (change)="aoSelecionarArquivo($event)" accept="image/*">
+      @if (formJoia.get('urlImagem')?.value) {
+        <div class="mt-2.5">
+          <p>Pré-visualização:</p>
+          <img [src]="formJoia.get('urlImagem')?.value" alt="Pré-visualização" class="max-w-xs max-h-xs">
+        </div>
+      }
     </div>
     <button type="submit" [disabled]="formJoia.invalid">Salvar Jóia</button>
   </form>

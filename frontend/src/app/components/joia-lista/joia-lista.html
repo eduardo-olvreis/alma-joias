@@ -6,8 +6,9 @@
     @if (joias.length > 0){
       <ul>
         @for (item of joias; track item.id) {
-          <li>
+          <li class="flex gap-2">
             <strong>{{ item.nome }}</strong><br>
+            <img [src]="item.urlImagem" [alt]="item.nome" class="max-w-xs max-h-xs">
             <button (click)="excluirJoia(item.id!)">Excluir</button>
             <a [routerLink]="['/produtos/detalhe', item.id]">Exibir detalhes</a>
             <button [routerLink]="['/admin/editar', item.id]">Editar</button>
