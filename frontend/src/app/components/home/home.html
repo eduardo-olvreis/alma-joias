@@ -1,25 +1,18 @@
-<main>
+<main class="flex flex-col justify-center items-center">
   <!-- Hero -->
   <section>
     <p>HERO</p>
   </section>
 
   <!-- Categorias -->
-  <section id="categorias">
-    <div class="flex flex-col py-6">
-      <h2>Categorias</h2>
-      <a [routerLink]="'/produtos/Anel'">
-        <app-categoria-card [nomeCategoria]="'Anéis'" [imagemCategoria]="'/assets/images/anel.jpg'"></app-categoria-card>
-      </a>
-      <a [routerLink]="'/produtos/Brinco'">
-        <app-categoria-card [nomeCategoria]="'Brincos'" [imagemCategoria]="'/assets/images/brinco.jpg'"></app-categoria-card>
-      </a>
-      <a [routerLink]="'/produtos/Colar'">
-        <app-categoria-card [nomeCategoria]="'Colares'" [imagemCategoria]="'/assets/images/colar.jpg'"></app-categoria-card>
-      </a>
-      <a [routerLink]="'/produtos/Pulseira'">
-        <app-categoria-card [nomeCategoria]="'Pulseiras'" [imagemCategoria]="'/assets/images/pulseira.jpg'"></app-categoria-card>
-      </a>
+  <section id="categorias" class="flex flex-col py-6 justify-center items-center w-full">
+    <h2>Categorias</h2>
+      <div class="flex flex-col items-center w-full gap-4">
+        @for (categoria of categorias; track categoria.nome) {
+          <a [routerLink]="categoria.link" class="block w-2/3">
+            <app-categoria-card [nomeCategoria]="categoria.nome" [imagemCategoria]="categoria.imagem"></app-categoria-card>
+          </a>
+        }
     </div>
   </section>
 
