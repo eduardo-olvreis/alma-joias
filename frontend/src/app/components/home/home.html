@@ -8,10 +8,18 @@
   <section id="categorias">
     <div class="flex flex-col py-6">
       <h2>Categorias</h2>
-      <a routerLink="/produtos/Anel">Anéis</a>
-      <a routerLink="/produtos/Brinco">Brincos</a>
-      <a routerLink="/produtos/Colar">Colares</a>
-      <a routerLink="/produtos/Pulseira">Pulseiras</a>
+      <a [routerLink]="'/produtos/Anel'">
+        <app-categoria-card [nomeCategoria]="'Anéis'" [imagemCategoria]="'/assets/images/anel.jpg'"></app-categoria-card>
+      </a>
+      <a [routerLink]="'/produtos/Brinco'">
+        <app-categoria-card [nomeCategoria]="'Brincos'" [imagemCategoria]="'/assets/images/brinco.jpg'"></app-categoria-card>
+      </a>
+      <a [routerLink]="'/produtos/Colar'">
+        <app-categoria-card [nomeCategoria]="'Colares'" [imagemCategoria]="'/assets/images/colar.jpg'"></app-categoria-card>
+      </a>
+      <a [routerLink]="'/produtos/Pulseira'">
+        <app-categoria-card [nomeCategoria]="'Pulseiras'" [imagemCategoria]="'/assets/images/pulseira.jpg'"></app-categoria-card>
+      </a>
     </div>
   </section>
 
